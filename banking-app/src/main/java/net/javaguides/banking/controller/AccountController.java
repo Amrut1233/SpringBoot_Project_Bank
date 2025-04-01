@@ -21,7 +21,7 @@ public class AccountController {
     }
 
     // Add Account REST API
-    @PostMapping
+    @PostMapping("/createbank")
     public ResponseEntity<AccountDto> addAccount(@RequestBody AccountDto accountDto){
         return new ResponseEntity<>(accountService.createAccount(accountDto), HttpStatus.CREATED);
     }
